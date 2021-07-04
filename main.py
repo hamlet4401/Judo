@@ -1,16 +1,17 @@
-# This is a sample Python script.
+from kivy.app import App
+from kivy.lang import Builder
+from kivy.core.window import Window
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+Window.clearcolor = (1,1,1,1)
+Window.size = (360,600)
+
+class JudoApp(App):
+    def build(self):
+        return Builder.load_file('judo.kv')
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def calculator():
+    print('1+1=2')
 
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    JudoApp().run()
